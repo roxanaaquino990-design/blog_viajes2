@@ -1,0 +1,28 @@
+@use "../variables";
+
+header {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+
+  h1 {
+    font-family: variables.$fuente-base;
+    font-size: 36px;
+    color: #000;
+  }
+
+  p {
+    font-family: variables.$fuente-base;
+    font-size: 20px;
+    color: variables.$color-texto;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: variables.$sombra;
+  }
+}
+

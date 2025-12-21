@@ -1,0 +1,13 @@
+@use "variables";
+@use "reset";
+
+@use "layout/header";
+@use "layout/nav";
+@use "layout/footer";
+
+@use "pages/home";
+@use "pages/nuestrosviajes";
+@use "pages/workingholiday";
+@use "pages/conocenos";
+
+@use "responsive";

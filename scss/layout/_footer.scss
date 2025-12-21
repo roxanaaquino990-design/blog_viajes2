@@ -1,0 +1,7 @@
+@use "../variables";
+
+footer {
+  text-align: center;
+  font-family: variables.$fuente-base;
+  padding: 20px;
+}

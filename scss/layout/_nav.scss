@@ -1,0 +1,23 @@
+@use "../variables";
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+
+    li {
+      a {
+        font-family: variables.$fuente-base;
+        color: variables.$color-principal;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

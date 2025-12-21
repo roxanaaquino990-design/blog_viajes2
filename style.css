@@ -1,3 +1,164 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+header {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+}
+header h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: #000;
+}
+header p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #17181F;
+  margin-bottom: 20px;
+}
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+nav ul li a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0B8770;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+.contenedor_experiencias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+.contenedor_experiencias h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 30px;
+  color: #333;
+}
+.contenedor_experiencias .bloques {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.bloque_whfrancia,
+.bloque_marruecos,
+.bloque_españa {
+  background: #ffffff;
+  width: 220px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.bloque_whfrancia:hover,
+.bloque_marruecos:hover,
+.bloque_españa:hover {
+  transform: translateY(-5px);
+}
+.bloque_whfrancia img,
+.bloque_marruecos img,
+.bloque_españa img {
+  width: 100%;
+  border-radius: 8px;
+}
+.bloque_whfrancia h3,
+.bloque_marruecos h3,
+.bloque_españa h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+.bloque_whfrancia p,
+.bloque_marruecos p,
+.bloque_españa p {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.imagenportada_nuestrosviajes {
+  width: 100%;
+  height: auto;
+}
+
+.workingholiday-title {
+  text-align: center;
+}
+
+.h1_conocenos {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0B8770;
+  text-align: center;
+}
+
+.article_conocenos {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.imagen_conocenos {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 28px;
+  }
+  header p {
+    font-size: 16px;
+  }
+  .bloque_whfrancia,
+  .bloque_marruecos,
+  .bloque_españa {
+    width: 90%;
+    max-width: 320px;
+  }
+  .imagenportada_nuestrosviajes {
+    width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  nav ul {
+    justify-content: center;
+  }
+  .bloque_whfrancia,
+  .bloque_marruecos,
+  .bloque_españa {
+    width: 45%;
+    max-width: 280px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

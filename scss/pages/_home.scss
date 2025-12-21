@@ -1,0 +1,54 @@
+@use "../variables";
+
+.contenedor_experiencias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: variables.$color-fondo;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+
+  h2 {
+    font-family: variables.$fuente-base;
+    margin-bottom: 30px;
+    color: #333;
+  }
+
+  .bloques {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+.bloque_whfrancia,
+.bloque_marruecos,
+.bloque_españa {
+  background: #ffffff;
+  width: 220px;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+  }
+
+  p {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+}

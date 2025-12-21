@@ -1,0 +1,19 @@
+@use "../variables";
+
+.h1_conocenos {
+  font-family: variables.$fuente-base;
+  color: variables.$color-principal;
+  text-align: center;
+}
+
+.article_conocenos {
+  font-family: variables.$fuente-base;
+  text-align: center;
+}
+
+.imagen_conocenos {
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: variables.$sombra;
+}
