@@ -7,7 +7,8 @@
 
   .bloque_whfrancia,
   .bloque_marruecos,
-  .bloque_españa {
+  .bloque_españa
+  .bloque_srilanka {
     width: 90%;
     max-width: 320px;
     margin: 0 auto 1rem;
@@ -29,9 +30,80 @@
   }
 }
 
-/* 💻 DESKTOP CHICO */
+/* 💻 DESKTOP */
 @media (max-width: 992px) {
   nav ul {
     justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .article_workingholiday {
+    text-align: center;
+  }
+}
+/* ======================
+   BLOQUES DE VIAJES (GRID)
+====================== */
+
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Responsive grid */
+@media (max-width: 992px) {
+  .bloques {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .bloques {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ======================
+   TARJETAS
+====================== */
+
+.bloque {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagen igual en todas */
+.bloque img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+/* Texto empujado abajo → misma altura */
+.bloque p {
+  margin-top: auto;
+}
+
+/* Hover */
+.bloque:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile imágenes */
+@media (max-width: 576px) {
+  .bloque img {
+    height: 180px;
   }
 }
