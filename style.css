@@ -105,6 +105,10 @@ footer {
   line-height: 1.4;
 }
 
+body.home header {
+  background-image: url("img/FotoPortada.jpeg");
+}
+
 .imagenportada_nuestrosviajes {
   width: 100%;
   height: auto;
@@ -132,32 +136,44 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-@media (max-width: 600px) {
+.imagen_conocenos {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* 📱 MOBILE */
+@media (max-width: 576px) {
   header h1 {
-    font-size: 28px;
+    font-size: 24px;
   }
   header p {
-    font-size: 16px;
+    font-size: 14px;
   }
   .bloque_whfrancia,
   .bloque_marruecos,
   .bloque_españa {
     width: 90%;
     max-width: 320px;
+    margin: 0 auto 1rem;
   }
   .imagenportada_nuestrosviajes {
     width: 90%;
+    margin: 0 auto;
   }
 }
-@media (max-width: 900px) {
-  nav ul {
-    justify-content: center;
-  }
+/* 📱📲 TABLET */
+@media (max-width: 768px) {
   .bloque_whfrancia,
   .bloque_marruecos,
   .bloque_españa {
     width: 45%;
     max-width: 280px;
+  }
+}
+/* 💻 DESKTOP CHICO */
+@media (max-width: 992px) {
+  nav ul {
+    justify-content: center;
   }
 }
 
