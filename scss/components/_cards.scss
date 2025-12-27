@@ -8,11 +8,9 @@
   padding: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
-  overflow: hidden;
 
   display: flex;
   flex-direction: column;
-  height: 100%;
 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
@@ -21,14 +19,13 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   }
 
- img {
-  width: 100%;
-  aspect-ratio: 16 / 9;   /* 👈 CLAVE */
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-}
-
+  img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
 
   h3 {
     margin: 12px 0 6px;
@@ -43,11 +40,10 @@
     color: #444;
   }
 }
+
+/* Mobile: permitir que el texto fluya */
 @media (max-width: 576px) {
   .bloque p {
     margin-top: 0;
   }
 }
-
-
-
