@@ -1,13 +1,23 @@
 @use "variables";
 @use "reset";
 
+/* Layout global */
 @use "layout/header";
 @use "layout/nav";
 @use "layout/footer";
+@use "layout/grid";
+
+/* Componentes reutilizables */
+@use "components/cards";
+
+/* Páginas (solo estilos específicos) */
+
+@use "base/typography";
 
 @use "pages/home";
 @use "pages/nuestrosviajes";
 @use "pages/workingholiday";
 @use "pages/conocenos";
 
+/* Responsive global (solo tipografías, ajustes finos) */
 @use "responsive";

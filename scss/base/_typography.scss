@@ -1,0 +1,11 @@
+@use "../variables";
+
+/* ======================
+   TÍTULOS GLOBALES
+====================== */
+
+body h1,
+body h2 {
+  font-family: variables.$fuente-base;
+  color: variables.$color-principal;
+}

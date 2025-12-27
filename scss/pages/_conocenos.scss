@@ -1,23 +1,29 @@
 @use "../variables";
 
+/* ======================
+   CONÓCENOS
+====================== */
+
 .h1_conocenos {
-  font-family: variables.$fuente-base;
-  color: variables.$color-principal;
+  .h1_conocenos {
   text-align: center;
+}
+
 }
 
 .article_conocenos {
   font-family: variables.$fuente-base;
   text-align: center;
+  max-width: 900px;        /* 👈 LIMITA EL ANCHO */
+  margin: 0 auto 3rem;     /* 👈 CENTRADO */
 }
 
 .imagen_conocenos {
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: variables.$sombra;
-}
-.imagen_conocenos {
   width: 100%;
-  margin: 2rem auto;
+  aspect-ratio: 16 / 9;    /* 👈 CLAVE */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: variables.$sombra;
+  margin-top: 2rem;
 }
+

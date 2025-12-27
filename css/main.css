@@ -1,0 +1,283 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Layout global */
+header {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+}
+header h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: #000;
+}
+header p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: #17181F;
+  margin-bottom: 20px;
+}
+header img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+nav ul li a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0B8770;
+  font-weight: bold;
+  text-decoration: none;
+}
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+/* ======================
+   CONTENEDOR DE EXPERIENCIAS
+====================== */
+.contenedor_experiencias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ======================
+   GRID DE CARDS
+====================== */
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Componentes reutilizables */
+/* ======================
+   TARJETA BASE (CARDS)
+====================== */
+.bloque {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bloque:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.bloque img {
+  width: 100%;
+  aspect-ratio: 16/9; /* 👈 CLAVE */
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+.bloque h3 {
+  margin: 12px 0 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.bloque p {
+  margin-top: auto;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+/* Páginas (solo estilos específicos) */
+/* ======================
+   TÍTULOS GLOBALES
+====================== */
+body h1,
+body h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0B8770;
+}
+
+.contenedor_experiencias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f2f2f2;
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+.contenedor_experiencias h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+/* ======================
+   GRID DE BLOQUES
+====================== */
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .bloques {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Mobile */
+@media (max-width: 576px) {
+  .bloques {
+    grid-template-columns: 1fr;
+  }
+}
+/* ======================
+   TARJETA BASE (TODAS)
+====================== */
+.bloque {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.bloque:hover {
+  transform: translateY(-5px);
+}
+.bloque img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.bloque h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1em;
+}
+.bloque p {
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-top: auto;
+}
+
+/* Mobile imágenes */
+@media (max-width: 576px) {
+  .bloque img {
+    height: 180px;
+  }
+}
+/* Header home */
+body.home header {
+  background-image: url("img/FotoPortada.jpeg");
+}
+
+.imagenportada_nuestrosviajes {
+  width: 100%;
+  height: auto;
+}
+
+.workingholiday-title {
+  text-align: center;
+}
+
+.article_workingholiday {
+  text-align: center;
+}
+
+.article_workingholiday p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* ======================
+   CONÓCENOS
+====================== */
+.h1_conocenos .h1_conocenos {
+  text-align: center;
+}
+
+.article_conocenos {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  max-width: 900px; /* 👈 LIMITA EL ANCHO */
+  margin: 0 auto 3rem; /* 👈 CENTRADO */
+}
+
+.imagen_conocenos {
+  width: 100%;
+  aspect-ratio: 16/9; /* 👈 CLAVE */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
+}
+
+/* Responsive global (solo tipografías, ajustes finos) */
+/* ======================
+   HEADER – MOBILE
+====================== */
+@media (max-width: 576px) {
+  header h1 {
+    font-size: 24px;
+  }
+  header p {
+    font-size: 14px;
+  }
+  .imagenportada_nuestrosviajes {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+/* ======================
+   NAV – TABLET / MOBILE
+====================== */
+@media (max-width: 992px) {
+  nav ul {
+    justify-content: center;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
