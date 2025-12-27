@@ -123,6 +123,11 @@ footer ul {
   color: #444;
 }
 
+@media (max-width: 576px) {
+  .bloque p {
+    margin-top: 0;
+  }
+}
 /* Páginas (solo estilos específicos) */
 /* ======================
    TÍTULOS GLOBALES
