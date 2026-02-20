@@ -1,30 +1,88 @@
-@use "../variables";
+@use "../variables" as *;
 
-header {
+
+/* ================= PORTADA HOME ================= */
+
+.header-home {
+  position: relative;
   text-align: center;
-  background-color: #ffffff;
-  padding: 20px;
+  margin-bottom: 4rem;
 
-  h1 {
-    font-family: variables.$fuente-base;
-    font-size: 36px;
-    color: #000;
-  }
-
-  p {
-    font-family: variables.$fuente-base;
-    font-size: 20px;
-    color: variables.$color-texto;
-    margin-bottom: 20px;
+  /* overlay oscuro suave */
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.15),
+      rgba(0,0,0,0.35)
+    );
+    z-index: 1;
   }
 
   img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: variables.$sombra;
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    filter: brightness(.72);
+    position: relative;
+    z-index: 0;
+  }
+
+  h1 {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-principal;
+    font-family: $fuente-base;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 2;
+
+    /* glow verde legible */
+    text-shadow:
+      0 4px 18px rgba(0,0,0,.55),
+      0 0 12px rgba($color-principal, .45);
+  }
+
+  p {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    max-width: 600px;
+    font-family: $fuente-base;
+    font-size: 1.1rem;
+    z-index: 2;
+    text-shadow: 0 2px 10px rgba(0,0,0,.7);
   }
 }
+
+
+/* ================= HEADER INTERNO ================= */
+
+.header-interno {
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  padding: 70px 0 40px;
+  margin-bottom: 40px;
+  text-align: center;
+
+  h1 {
+    position: static;
+    transform: none;
+    color: $color-principal;
+    font-family: $fuente-base;
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    font-weight: 700;
+    text-shadow: 0 8px 18px rgba(0,0,0,.12);
+  }
+}
+
+
 /* ===== Dropdown Working Holidays ===== */
 
 .navbar .dropdown-menu {
@@ -42,12 +100,4 @@ header {
     background: #f3f4f6;
     padding-left: 1.2rem;
   }
-}
-.navbar .nav-link {
-  color: #222 !important;
-  font-weight: 500;
-}
-
-.navbar .nav-link:hover {
-  color: #000 !important;
 }
