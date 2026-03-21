@@ -344,12 +344,4 @@ body.home header {
   }
 }
 
-/*# sourceMappingURL=main.css.map */
-/* ===== CARDS CLICKEABLES ===== */
-.bloque a {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  text-decoration: none;
-  color: inherit;
-}
+/*# sourceMappingURL=styles.css.map */
