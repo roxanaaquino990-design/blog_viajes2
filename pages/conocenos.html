@@ -18,7 +18,8 @@
 
 <body>
 
- <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
@@ -26,27 +27,41 @@
 
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto">
+
         <li class="nav-item">
-          <a class="nav-link" href="../index.html">Inicio</a>
+          <a class="nav-link active" href="../index.html">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="nuestrosviajes.html">Nuestros viajes</a>
+
         <li class="nav-item dropdown">
-  <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-    Working holidays
-  </a>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="francia.html">Francia</a></li>
-    <li><a class="dropdown-item" href="hungria.html">Hungría</a></li>
-  </ul>
-</li>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Nuestros viajes
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="marruecos.html">Marruecos</a></li>
+            <li><a class="dropdown-item" href="aurorasboreales.html">Auroras boreales</a></li>
+            <li><a class="dropdown-item" href="srilanka.html">Sri Lanka</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+            Working holidays
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="francia.html">Francia</a></li>
+            <li><a class="dropdown-item" href="hungria.html">Hungría</a></li>
+          </ul>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="conocenos.html">Conocenos</a>
         </li>
+
       </ul>
     </div>
   </div>
 </nav>
+
 
  <header class="header-home">
   <img src="../img/FotoConocenos.png"
@@ -71,37 +86,51 @@
 
     </article>
 
-    <section class="contenedor_experiencias">
-      <h2>Experiencias</h2>
+    
+<section class="contenedor_experiencias">
+  <h2>Experiencias</h2>
 
-      <div class="bloques">
+  <div class="bloques">
 
-        <article class="bloque">
-          <img src="../img/FotoWHhungria.jpg" alt="Experiencia Working Holiday en Hungria">
-          <h3>Working Holiday Hungría</h3>
-          <p>Te contamos nuestra experiencia desde que conseguimos el turno hasta llegar allá.</p>
-        </article>
+    <!-- MARRUECOS -->
+    <article class="bloque">
+      <a href="marruecos.html">
+        <img src="../img/FotoMarruecos.JPG" alt="Viaje a Marruecos">
+        <h3>Marruecos</h3>
+        <p>¡Viaje grupal en auto! Recorrimos de norte a sur. Y una noche dormimos en el Desierto del Sahara.</p>
+      </a>
+    </article>
 
-        <article class="bloque">
-          <img src="../img/FotoMarruecos.JPG" alt="Viaje por Marruecos de norte a sur">
-          <h3>Marruecos</h3>
-          <p>¡Viaje grupal en auto! Recorrimos de norte a sur. Y una noche dormimos en el Desierto del Sahara.</p>
-        </article>
+    <!-- HUNGRÍA -->
+    <article class="bloque">
+      <a href="hungria.html">
+        <img src="../img/FotoWHhungria.jpg" alt="Working Holiday Hungría">
+        <h3>Working Holiday Hungría</h3>
+        <p>Te contamos nuestra experiencia desde que conseguimos el turno hasta llegar allá.</p>
+      </a>
+    </article>
 
-        <article class="bloque">
-          <img src="../img/FotoAurora.jpg" alt="Viaje Auroras Boreales">
-          <h3>Auroras Boreales</h3>
-          <p>Desde Estocolmo, hasta el norte de Suecia y Noruega para vivir una de las mejores experiencias del mundo.</p>
-        </article>
+    <!-- AURORAS -->
+    <article class="bloque">
+      <a href="aurorasboreales.html">
+        <img src="../img/FotoAurora.jpg" alt="Viaje Auroras Boreales">
+        <h3>Auroras Boreales</h3>
+        <p>Desde Estocolmo, hasta el norte de Suecia y Noruega para vivir una de las mejores experiencias del mundo.</p>
+      </a>
+    </article>
 
-        <article class="bloque">
-          <img src="../img/FotoSriLanka.JPG" alt="Viaje por Sri Lanka en transporte público">
-          <h3>Sri Lanka</h3>
-          <p>Un mes recorriendo el interior del país hasta las playas del sur, en transporte público.</p>
-        </article>
+    <!-- SRI LANKA -->
+    <article class="bloque">
+      <a href="srilanka.html">
+        <img src="../img/FotoSriLanka.JPG" alt="Viaje a Sri Lanka">
+        <h3>Sri Lanka</h3>
+        <p>Un mes recorriendo el interior del país hasta las playas del sur, en transporte público.</p>
+      </a>
+    </article>
 
-      </div>
-    </section>
+  </div>
+</section>
+
   </main>
 
   <footer>

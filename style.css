@@ -162,9 +162,7 @@ footer ul {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
-.bloque {
-  /* El enlace ocupa toda la tarjeta sin subrayados */
-}
+
 .bloque a,
 .bloque a:hover,
 .bloque a:focus,

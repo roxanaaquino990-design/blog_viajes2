@@ -170,6 +170,11 @@ footer ul {
 .bloque a:focus,
 .bloque a:visited,
 .bloque a:active {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%;
+  height: 100%;
   text-decoration: none;
   color: inherit;
 }
