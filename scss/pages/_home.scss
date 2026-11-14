@@ -1,4 +1,9 @@
+
 @use "../variables";
+
+/* ======================
+   PÁGINA DE INICIO
+====================== */
 
 .contenedor_experiencias {
   display: flex;
@@ -17,8 +22,9 @@
 }
 
 /* ======================
-   GRID DE BLOQUES
+   GRID DE EXPERIENCIAS
 ====================== */
+
 .bloques {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -40,52 +46,7 @@
     grid-template-columns: 1fr;
   }
 }
-
-/* ======================
-   TARJETA BASE (TODAS)
-====================== */
-.bloque {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-
-  img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-  }
-
-  h3 {
-    margin: 10px 0 5px;
-    font-size: 1.1em;
-  }
-
-  p {
-    font-size: 0.9em;
-    line-height: 1.4;
-    margin-top: auto;
-  }
-}
-
-/* Mobile imágenes */
-@media (max-width: 576px) {
-  .bloque img {
-    height: 180px;
-  }
-}
-
 /* Header home */
 body.home header {
-  background-image: url("img/FotoPortada.jpeg");
+  background-image: url("../img/FotoPortada.jpeg");
 }

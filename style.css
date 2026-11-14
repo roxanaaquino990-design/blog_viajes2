@@ -11,27 +11,88 @@ img {
   display: block;
 }
 
-header {
+/* Layout global */
+/* ================= PORTADA HOME ================= */
+.header-home {
+  position: relative;
   text-align: center;
-  background-color: #ffffff;
-  padding: 20px;
+  margin-bottom: 4rem;
+  /* overlay oscuro suave */
 }
-header h1 {
+.header-home::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.35));
+  z-index: 1;
+}
+.header-home img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  filter: brightness(0.72);
+  position: relative;
+  z-index: 0;
+}
+.header-home h1 {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #0B8770;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 36px;
-  color: #000;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  letter-spacing: 1px;
+  z-index: 2;
+  /* glow verde legible */
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), 0 0 12px rgba(11, 135, 112, 0.45);
 }
-header p {
+.header-home p {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  max-width: 600px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  color: #17181F;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  z-index: 2;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
-header img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+/* ================= HEADER INTERNO ================= */
+.header-interno {
+  background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+  padding: 70px 0 40px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.header-interno h1 {
+  position: static;
+  transform: none;
+  color: #0B8770;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: 700;
+  text-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Dropdown Working Holidays ===== */
+.navbar .dropdown-menu {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+}
+
+.dropdown-item {
+  border-radius: 8px;
+  transition: 0.2s;
+}
+.dropdown-item:hover {
+  background: #f3f4f6;
+  padding-left: 1.2rem;
 }
 
 nav ul {
@@ -60,6 +121,99 @@ footer ul {
   list-style: none;
 }
 
+/* ======================
+   CONTENEDOR DE EXPERIENCIAS
+====================== */
+.contenedor_experiencias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ======================
+   GRID DE CARDS
+====================== */
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Componentes reutilizables */
+/* ======================
+   TARJETA BASE (CARDS)
+====================== */
+.bloque {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bloque:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+.bloque {
+  /* El enlace ocupa toda la tarjeta sin subrayados */
+}
+.bloque a,
+.bloque a:hover,
+.bloque a:focus,
+.bloque a:visited,
+.bloque a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.bloque img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+.bloque h3 {
+  margin: 12px 0 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: inherit;
+  text-decoration: none;
+}
+.bloque p {
+  margin-top: auto;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #444;
+  text-decoration: none;
+}
+
+/* Mobile: permitir que el texto fluya */
+@media (max-width: 576px) {
+  .bloque p {
+    margin-top: 0;
+  }
+}
+/* Páginas (solo estilos específicos) */
+/* ======================
+   TÍTULOS GLOBALES
+====================== */
+body h1,
+body h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #0B8770;
+}
+
+/* ======================
+   PÁGINA DE INICIO
+====================== */
 .contenedor_experiencias {
   display: flex;
   flex-direction: column;
@@ -74,49 +228,33 @@ footer ul {
   margin-bottom: 30px;
   color: #333;
 }
-.contenedor_experiencias .bloques {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
 
-.bloque_whfrancia,
-.bloque_marruecos,
-.bloque_españa {
-  background: #ffffff;
-  width: 220px;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-}
-.bloque_whfrancia:hover,
-.bloque_marruecos:hover,
-.bloque_españa:hover {
-  transform: translateY(-5px);
-}
-.bloque_whfrancia img,
-.bloque_marruecos img,
-.bloque_españa img {
+/* ======================
+   GRID DE EXPERIENCIAS
+====================== */
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
   width: 100%;
-  border-radius: 8px;
-}
-.bloque_whfrancia h3,
-.bloque_marruecos h3,
-.bloque_españa h3 {
-  margin: 10px 0 5px;
-  font-size: 1.1em;
-}
-.bloque_whfrancia p,
-.bloque_marruecos p,
-.bloque_españa p {
-  font-size: 0.9em;
-  line-height: 1.4;
+  max-width: 1100px;
 }
 
+/* Tablet */
+@media (max-width: 992px) {
+  .bloques {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Mobile */
+@media (max-width: 576px) {
+  .bloques {
+    grid-template-columns: 1fr;
+  }
+}
+/* Header home */
 body.home header {
-  background-image: url("img/FotoPortada.jpeg");
+  background-image: url("../img/FotoPortada.jpeg");
 }
 
 .imagenportada_nuestrosviajes {
@@ -137,30 +275,37 @@ body.home header {
   margin-bottom: 1rem;
 }
 
-.h1_conocenos {
-  font-family: Arial, Helvetica, sans-serif;
-  color: #0B8770;
+main p {
+  text-align: justify;
+}
+
+/* ======================
+   CONÓCENOS
+====================== */
+.h1_conocenos .h1_conocenos {
   text-align: center;
 }
 
 .article_conocenos {
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-}
-
-.imagen_conocenos {
-  display: block;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 900px; /* 👈 LIMITA EL ANCHO */
+  margin: 0 auto 3rem; /* 👈 CENTRADO */
 }
 
 .imagen_conocenos {
   width: 100%;
-  margin: 2rem auto;
+  aspect-ratio: 16/9; /* 👈 CLAVE */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 2rem;
 }
 
-/* 📱 MOBILE */
+/* Responsive global (solo tipografías, ajustes finos) */
+/* ======================
+   HEADER – MOBILE
+====================== */
 @media (max-width: 576px) {
   header h1 {
     font-size: 24px;
@@ -168,96 +313,17 @@ body.home header {
   header p {
     font-size: 14px;
   }
-  .bloque_whfrancia,
-  .bloque_marruecos,
-  .bloque_españa .bloque_srilanka {
-    width: 90%;
-    max-width: 320px;
-    margin: 0 auto 1rem;
-  }
   .imagenportada_nuestrosviajes {
     width: 90%;
     margin: 0 auto;
   }
 }
-/* 📱📲 TABLET */
-@media (max-width: 768px) {
-  .bloque_whfrancia,
-  .bloque_marruecos,
-  .bloque_españa {
-    width: 45%;
-    max-width: 280px;
-  }
-}
-/* 💻 DESKTOP */
+/* ======================
+   NAV – TABLET / MOBILE
+====================== */
 @media (max-width: 992px) {
   nav ul {
     justify-content: center;
-  }
-}
-@media (max-width: 576px) {
-  .article_workingholiday {
-    text-align: center;
-  }
-}
-/* ======================
-   BLOQUES DE VIAJES (GRID)
-====================== */
-.bloques {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-/* Responsive grid */
-@media (max-width: 992px) {
-  .bloques {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 576px) {
-  .bloques {
-    grid-template-columns: 1fr;
-  }
-}
-/* ======================
-   TARJETAS
-====================== */
-.bloque {
-  background-color: #fff;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Imagen igual en todas */
-.bloque img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-}
-
-/* Texto empujado abajo → misma altura */
-.bloque p {
-  margin-top: auto;
-}
-
-/* Hover */
-.bloque:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Mobile imágenes */
-@media (max-width: 576px) {
-  .bloque img {
-    height: 180px;
   }
 }
 

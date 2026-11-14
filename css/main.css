@@ -162,6 +162,17 @@ footer ul {
   transform: translateY(-6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
+.bloque {
+  /* El enlace ocupa toda la tarjeta sin subrayados */
+}
+.bloque a,
+.bloque a:hover,
+.bloque a:focus,
+.bloque a:visited,
+.bloque a:active {
+  text-decoration: none;
+  color: inherit;
+}
 .bloque img {
   width: 100%;
   aspect-ratio: 16/9;
@@ -173,12 +184,15 @@ footer ul {
   margin: 12px 0 6px;
   font-size: 1.1rem;
   font-weight: 600;
+  color: inherit;
+  text-decoration: none;
 }
 .bloque p {
   margin-top: auto;
   font-size: 0.9rem;
   line-height: 1.4;
   color: #444;
+  text-decoration: none;
 }
 
 /* Mobile: permitir que el texto fluya */
@@ -197,6 +211,9 @@ body h2 {
   color: #0B8770;
 }
 
+/* ======================
+   PÁGINA DE INICIO
+====================== */
 .contenedor_experiencias {
   display: flex;
   flex-direction: column;
@@ -213,7 +230,7 @@ body h2 {
 }
 
 /* ======================
-   GRID DE BLOQUES
+   GRID DE EXPERIENCIAS
 ====================== */
 .bloques {
   display: grid;
@@ -235,47 +252,9 @@ body h2 {
     grid-template-columns: 1fr;
   }
 }
-/* ======================
-   TARJETA BASE (TODAS)
-====================== */
-.bloque {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-.bloque:hover {
-  transform: translateY(-5px);
-}
-.bloque img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.bloque h3 {
-  margin: 10px 0 5px;
-  font-size: 1.1em;
-}
-.bloque p {
-  font-size: 0.9em;
-  line-height: 1.4;
-  margin-top: auto;
-}
-
-/* Mobile imágenes */
-@media (max-width: 576px) {
-  .bloque img {
-    height: 180px;
-  }
-}
 /* Header home */
 body.home header {
-  background-image: url("img/FotoPortada.jpeg");
+  background-image: url("../img/FotoPortada.jpeg");
 }
 
 .imagenportada_nuestrosviajes {
